@@ -21,6 +21,9 @@ while True:
 
     if evt == 1:
         cv2.circle(frame,pnt,5,(0,0,255),-1)
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        myStr = str(pnt)
+        cv2.putText(frame,myStr,pnt,font,1,(255,0,0),2)
 
     cv2.imshow('picam', frame)
     cv2.moveWindow('picam',0,0)
